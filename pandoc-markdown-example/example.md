@@ -32,6 +32,10 @@ A lot of other languages are supported, as well as console output, and even LaTe
 $ echo "Hello, world!"
 Hello, world!
 ```
+> This is a blockquote.
+> It can span multiple lines,   
+> and has the same rules as a paragraph.
+
 
 ## This heading is hidden from the table of contents {.unnumbered .unlisted}
 1. This is a list
