@@ -1,6 +1,7 @@
 ---
 title: Pandoc Markdown Example
 bibliography: example.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
 ---
 
 \newpage
@@ -17,6 +18,20 @@ This is a new paragraph, separated from the previous by two newlines.
 In order to have a line break in a paragraph, you need to end the line before it with two or three spaces.
 
 BibTex references can be added in pandoc, and zotero references can be saved as BibTex. [@hasselquistQUICThroughputFairness2022]
+
+
+This is a formatted c++ code block:
+```cpp
+int main() {
+    std::cout << "Hello, world!" << std::endl;
+    return 0;
+}
+```
+A lot of other languages are supported, as well as console output, and even LaTeX code.
+```console
+$ echo "Hello, world!"
+Hello, world!
+```
 
 ## This heading is hidden from the table of contents {.unnumbered .unlisted}
 1. This is a list
@@ -58,7 +73,7 @@ Yep! You can use git to version control your markdown files, and vscode has a bu
 
 \newpage
 # AI assisted text editing
-You can use your university email address or your student ID card to get a free github pro subscription that allows to use GitHub Copilot in VSCode.
+You can use your university email address or your student ID card to get a free github pro subscription that allows u to use GitHub Copilot in VSCode.
 GitHub copilot suggests predictions of what you're going to type, and you can ask it questions in the document or in the comments. It can help with git commands, md and latex syntax or even answer general trivia.
 
 In order to ask a question you need to precede it by "q:" or it might not suggest a response to it.   
@@ -93,6 +108,7 @@ Here's an example:
 \newpage
 
 # References[^1] [^2]
+
 ::: {#refs}
 :::
 
