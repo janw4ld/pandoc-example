@@ -53,7 +53,7 @@ but LateX doesn't like headings 5 and 6
 ###### heading 6 looks like regular text, btw
 
 # Version Control??
-Yep! You can use git to version control your markdown files, and vscode has a built in git interface. You can also use github to host your markdown files, kinda as a backup and a way to share them with others.
+Yep! You can use git to version control your markdown files, and vscode has a built in git interface. You can also use github to host your markdown files, kinda as a backup and a way to share them with others. This paragraph is in a new commit from the previous. 
 
 \newpage
 
