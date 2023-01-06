@@ -1,0 +1,31 @@
+@article{hasselquistQUICThroughputFairness2022,
+  title = {{{QUIC Throughput}} and {{Fairness}} over {{Dual Connectivity}}},
+  author = {Hasselquist, David and Lindstr{\"o}m, Christoffer and Korzhitskii, Nikita and Carlsson, Niklas and Gurtov, Andrei},
+  year = {2022},
+  month = dec,
+  journal = {Computer Networks},
+  volume = {219},
+  pages = {109431},
+  issn = {1389-1286},
+  doi = {10.1016/j.comnet.2022.109431},
+  abstract = {Dual Connectivity (DC) is an important lower-layer feature accelerating the transition from 4G to 5G that also is expected to play an important role in standalone 5G radio networks. However, even though the packet reordering introduced by DC can significantly impact the performance of upper-layer protocols, no prior work has studied the impact of DC on QUIC. In this paper, we present the first such performance study. Using a series of throughput and fairness experiments, we show how QUIC is affected by different DC parameters, network conditions, and whether the DC implementation aims to improve throughput or reliability. Results for two QUIC implementations (aioquic, ngtcp2) and two congestion control algorithms (NewReno, CUBIC) are presented under both static and highly time-varying network conditions Our findings provide network operators with insights and understanding into the impacts of splitting QUIC traffic in a DC environment. With reasonably selected DC parameters and increased UDP receive buffers, QUIC over DC performs similarly to TCP over DC and achieves optimal fairness under symmetric link conditions when DC is not used for packet duplication. The insights can help network operators provide modern users with better end-to-end service when deploying DC.},
+  langid = {english},
+  keywords = {Dual connectivity,Fairness,Multipath,QUIC,Throughput,Transport protocol},
+  file = {/home/meka/Zotero/storage/VKS843WG/Hasselquist et al. - 2022 - QUIC Throughput and Fairness over Dual Connectivit.pdf;/home/meka/Zotero/storage/2GFZJ93A/S1389128622004650.html}
+}
+
+@article{puliafitoServersideQUICConnection2022,
+  title = {Server-Side {{QUIC}} Connection Migration to Support Microservice Deployment at the Edge},
+  author = {Puliafito, Carlo and Conforti, Luca and Virdis, Antonio and Mingozzi, Enzo},
+  year = {2022},
+  month = jul,
+  journal = {Pervasive and Mobile Computing},
+  volume = {83},
+  pages = {101580},
+  issn = {1574-1192},
+  doi = {10.1016/j.pmcj.2022.101580},
+  abstract = {In edge computing environments, microservices are typically deployed in the form of containers. To maintain proximity between edge computing services and mobile users, containers need to be migrated between nodes. When migrating containers, however, it is important to consider that they typically have ongoing communications with client endpoints. Moreover, in case of connection-oriented protocols, communicating endpoints share a state (i.e., the connection), which needs to be migrated as well. Connection-oriented protocols like TCP were not designed having connection migration in mind, thus their connections cannot survive a change of IP address or port number. On the other hand, QUIC, a transport protocol recently standardised by IETF, provides a mechanism for client-side connection migration, whereas a server-side connection migration is not yet implemented nor investigated. In this work, we propose an extension of QUIC to support server-side connection migration when a container is migrated between servers. We designed three different strategies, fitting a diverse set of scenarios, wherein the migration procedure is either or not supported by a centralised entity, e.g., an orchestrator. We implemented and verified the proposed extension. Besides, we evaluated it on a real testbed, showing how each of the three strategies is impacted by different container migration techniques and container sizes. To conclude, we compared our solution against two alternatives based on TCP+DNS and MPTCP respectively, demonstrating performance improvements in terms service-migration time.},
+  langid = {english},
+  keywords = {Container migration,Edge computing,Internet of Things,Mobility,QUIC,Service continuity},
+  file = {/home/meka/Zotero/storage/HFHBTAI3/S157411922200030X.html}
+}
