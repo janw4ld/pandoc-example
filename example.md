@@ -4,6 +4,7 @@ bibliography: example.bib
 ---
 
 \newpage
+
 # This is a heading
 The headings appear as sections in the table of content. If your pdf viewer supports document outlines, the headings will also appear there. The table of contents is automatically generated from the headings by Pandoc. You can generate it in VSCode or write it manually instead if you want to.
 
@@ -53,7 +54,41 @@ but LateX doesn't like headings 5 and 6
 ###### heading 6 looks like regular text, btw
 
 # Version Control??
-Yep! You can use git to version control your markdown files, and vscode has a built in git interface. You can also use github to host your markdown files, kinda as a backup and a way to share them with others. This paragraph is in a new commit from the previous. 
+Yep! You can use git to version control your markdown files, and vscode has a built in git interface. You can also use github to host your markdown files, kinda as a backup and a way to share them with others. This paragraph is in a new commit from the previous. Every commit is a point in the project's time that you decided to save and assign a name to. You can always go back to any commit, so you should create a commit for every significant addition or change to your project. Git can be used to collaborate with others, but that's a bit complicated for a text editing workflow.
+
+\newpage
+# AI assisted text editing
+You can use your university email address or your student ID card to get a free github pro subscription that allows to use GitHub Copilot in VSCode.
+GitHub copilot suggests predictions of what you're going to type, and you can ask it questions in the document or in the comments. It can help with git commands, md and latex syntax or even answer general trivia.
+
+In order to ask a question you need to precede it by "q:" or it might not suggest a response to it.   
+Here's an example:
+
+   - q: Who is the queen of England?
+   - a: Elizabeth II
+
+<!-- 
+# Dirty hacks you might need
+<table><tr><th>
+   This is a
+   </th><td>
+    It's not a thing
+   </th><td>
+   but this is
+</td></tr><tr><th>
+   vertical headered
+   </th><td>
+   you should wanna
+   </th><td>
+   how you
+   </td></tr><tr><th>
+   HTML table
+   </th><td>
+   use in a document
+   </th><td>
+   can do it
+</td></tr></table>
+-->
 
 \newpage
 
@@ -61,5 +96,5 @@ Yep! You can use git to version control your markdown files, and vscode has a bu
 ::: {#refs}
 :::
 
-[^1]: Inserting citations is optional, if you don't insert them in the doc pandoc adds them to the last page.
+[^1]: Inserting refs is optional, if you don't insert them in the doc, pandoc adds them to the last page.
 [^2]: This is a footnote, btw.
