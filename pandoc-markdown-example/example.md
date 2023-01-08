@@ -35,7 +35,7 @@ Like this
 
 ##### heading 5
 And this too,   
-but LateX doesn't like headings 5 and 6
+but \LaTeX doesn't like headings 5 and 6
 
 ###### heading 6 looks
  like regular text
@@ -46,7 +46,7 @@ This is a paragraph.
 
 markdown text can have *italics*, **bold**, `monospace` and  ~~strikethrough~~ 
 in it. \uline{underlined text isn't a thing in markdown}, but u can do it in 
-\LaTeX, and in <u>HTML</u> too, LaTex has \uuline{dunderline text} as well.
+\LaTeX, and in <u>HTML</u> too, \LaTeX has \uuline{dunderline text} as well.
 
 Pure markdown doesn't support ^superscript^ and ~subscript~, but pandoc does.
 
@@ -70,7 +70,7 @@ before it with two or three spaces.
 | the  | first  | row     |
 | the  | second | one     |
 
-You can float the table to the right or left using latex's float environment.
+You can float the table to the right or left using \LaTeX's float environment.
 
 
 ## Citations
@@ -111,7 +111,7 @@ but this feels so out of control, right?
 
 \newpage
 
-Using LateX, images can be scaled and positioned in the document.
+Using \LaTeX, images can be scaled and positioned in the document.
 
 \begin{figure}
    \centering  % centering the image (obviously) optional.
@@ -202,7 +202,7 @@ You can use your university email address or your student ID card to get a free
 github pro subscription that allows u to use GitHub Copilot in VSCode. GitHub 
 copilot suggests predictions of what you're going to type, and you can ask it
 questions in the document or the comments. It can help with git commands, md and
-latex syntax or even answer general trivia.
+\LaTeX syntax or even answer general trivia.
 
 To ask a question you need to precede it with "q:" or copilot might not suggest
 a response to it.   
@@ -212,8 +212,10 @@ Here's an example:
 - a: Elizabeth II
 
 # Further Reading
-- [Pandoc Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
-- [Overleaf \LaTeX](https://www.overleaf.com/learn)
+- [Pandoc Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)   
+  [https://pandoc.org/MANUAL.html#pandocs-markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
+- [Overleaf \LaTeX](https://www.overleaf.com/learn)   
+  [https://www.overleaf.com/learn](https://www.overleaf.com/learn)
 <!-- 
 # A dirty hack you might need
 If you want a table with a vertical header, you can write it in html, but pandoc
