@@ -8,6 +8,7 @@ csl: https://raw.githubusercontent.com/citation-style-language/styles/master/iee
 header-includes: |
    \usepackage{graphicx}
    \usepackage{wrapfig}
+   \usepackage{multicol}
 ---
 
 \newpage
@@ -154,6 +155,17 @@ numbering them by hand is possible.[^note]
 [^4]: pandoc & github support footnotes, but not pure markdown.
 [^note]: This is an automatic footnote, created and referenced by id. This is
 the recommended method of footnote creation.
+
+## Multicolumns
+\begin{multicols}{2}
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ut 
+doloribus ducimus laudantium odit, nostrum consequuntur fugit cumque 
+vitae officia a possimus corrupti repellendus numquam voluptatibus illo!
+Fuga, explicabo veritatis! Lorem ipsum dolor, sit amet consectetur
+adipisicing elit. Soluta cumque facilis consequuntur tenetur veniam 
+eveniet distinctio neque maxime fugiat assumenda. Odio placeat quod 
+iusto illum. Odit, tenetur voluptate. Sapiente, soluta?
+\end{multicols}
 
 ## Codeblocks
 This is a formatted c++ code block:
