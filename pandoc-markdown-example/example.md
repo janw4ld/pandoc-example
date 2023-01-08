@@ -65,6 +65,17 @@ with it is nice.
 Figures are automatically numbered and can be referenced in the text using their label.   
 Example: Figure (\ref{fig:lion}) is TeX's picture.
 
+Links can be added as follows [this is a link to google](https://google.com), 
+you can also link to other sections in the paper using the heading's id, which
+is usually the heading's text all lowercase with `-` instead of spaces, if you
+have duplicate heading names the IDs will be suffixed with `-1`, `-2`, etc.  
+Example:   
+[this is a link to the heading 2](#this-is-a-heading-2).
+# This is a heading
+[This is a link to this heading](#this-is-a-heading-1)   
+Heading links can also be copied from the table of contents, or the markdown
+preview.
+
 This is a formatted c++ code block:
 ```cpp
 int main() {
