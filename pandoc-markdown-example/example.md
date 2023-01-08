@@ -81,6 +81,15 @@ Citation styles are defined in Citation Style Language (CSL) files, this is the
 same format used by Zotero and Mendeley Cite, you can just copy your old style
 as is.
 
+# References[^1] [^2] {.unnumbered .unlisted}
+
+::: {#refs}
+:::
+
+[^1]: Inserting refs is optional, if you don't insert them in the doc, pandoc adds them to the last page.
+[^2]: This is a footnote, btw.
+
+
 ## Links
 Links can be added as follows [this is a link to google](https://google.com), 
 you can also link to other sections in the paper using the heading's id, which
@@ -100,10 +109,12 @@ Images can be inserted in markdown like this:
 ![md logo](resources/auto-20230108110032.png)  
 but this feels so out of control, right?   
 
+\newpage
+
 Using LateX, images can be scaled and positioned in the document.
 
 \begin{figure}
-   \centering % centering the image (obviously) optional.
+   \centering  % centering the image (obviously) optional.
    \includegraphics[width=0.3\linewidth]{./resources/auto-20230108110032.png}
 \end{figure}
   
@@ -136,10 +147,13 @@ label. These references are also links to their figures.
 Example: Figure (\ref{fig:lion}) is TeX's picture.
 
 ## Footnotes
-Footnotes [^2] are a thing too. [^1]
+Footnotes[^4] are a thing.[^3] They are numbered and ordered automatically, but
+numbering them by hand is possible.[^note]
 
-[^1]: This is a footnote.
-[^2]: pandoc & github support footnotes, but not pure markdown.
+[^3]: This is a footnote.
+[^4]: pandoc & github support footnotes, but not pure markdown.
+[^note]: This is an automatic footnote, created and referenced by id. This is
+the recommended method of footnote creation.
 
 ## Codeblocks
 This is a formatted c++ code block:
@@ -198,7 +212,8 @@ Here's an example:
 - a: Elizabeth II
 
 # Further Reading
-- [Markdown Cheatsheet](
+- [Pandoc Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
+- [Overleaf \LaTeX](https://www.overleaf.com/learn)
 <!-- 
 # A dirty hack you might need
 If you want a table with a vertical header, you can write it in html, but pandoc
@@ -223,11 +238,3 @@ will not render it in the pdf.
    can do it
 </td></tr></table>
 -->
-
-# References[^3] [^4]
-
-::: {#refs}
-:::
-
-[^3]: Inserting refs is optional, if you don't insert them in the doc, pandoc adds them to the last page.
-[^4]: This is a footnote, btw.
