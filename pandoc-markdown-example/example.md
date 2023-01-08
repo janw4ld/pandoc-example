@@ -76,7 +76,9 @@ as is.
 Images can be inserted in markdown like this:   
 ![md logo](resources/auto-20230108110032.png)  
 but this feels so out of control, right?   
+
 Using LateX, images can be scaled and positioned in the document.
+
 \begin{figure}
    \centering % centering the image (obviously) optional.
    \includegraphics[width=0.5\linewidth]{./resources/auto-20230108110032.png}
@@ -93,6 +95,7 @@ Using LateX, images can be scaled and positioned in the document.
       \label{fig:lion}
    \end{center}
 \end{wrapfigure}
+
 Here is a bunch of text that we can put around an image. The image will be shown
 on the right side of the paper, but our text can go all around it. There will be
 spacing above and below the image where text can go.  This spacing can actually 
@@ -104,7 +107,7 @@ more.  I could go on a bit and tell you more secrets of image placement.  Did
 you know that you can use the `center` environment around the `includeimage` to
 make things look even prettier?  It's true.  The control which \LaTeX provides
 with it is nice.
-Figures are automatically numbered and can be referenced in the text using their label.   
+Figures are automatically numbered and can be referenced in the text using their label. These references are also links to their figures.   
 
 Example: Figure (\ref{fig:lion}) is TeX's picture.
 
