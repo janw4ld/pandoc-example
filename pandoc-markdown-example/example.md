@@ -2,6 +2,9 @@
 title: Pandoc Markdown Example
 bibliography: example.bib
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
+header-includes: |
+   \usepackage{graphicx}
+   \usepackage{wrapfig}
 ---
 
 \newpage
@@ -29,6 +32,38 @@ before it with two or three spaces.
 BibTex references can be added in pandoc, and zotero references
 can be saved as BibTex. [@hasselquistQUICThroughputFairness2022]
 
+Images can be inserted in markdown like this:   
+![md logo](resources/auto-20230108110032.png)  
+but this feels so out of control, right?   
+Using LateX, images can be scaled and positioned in the document.
+\begin{figure}
+   \includegraphics[width=0.5\linewidth]{./resources/auto-20230108110032.png}
+\end{figure}
+  
+<!-- ![https://ctan.org/lion/files/ctan_lion_2400.png](https://ctan.org/lion/files/ctan_lion_2400.png) -->
+
+\newpage
+
+\begin{wrapfigure}{r}{0.3\textwidth}
+   \begin{center}
+      \includegraphics[width=0.28\textwidth]{./resources/auto-20230108111244.png}
+      \caption{This lion is the TeX mascot}
+      \label{fig:lion}
+   \end{center}
+\end{wrapfigure}
+Here is a bunch of text that we can put around an image. The image will be shown
+on the right side of the paper, but our text can go all around it. There will be
+spacing above and below the image where text can go.  This spacing can actually 
+be controlled by using a negative value with `vskip`, but we will not be going
+into that here. It will be just our little secret: you, me, and the compiler. I
+hope this is enough dummy text for this example.  If not, I will have to type up
+some more. Oops, I just tried compiling it.  Apparently I need to include a bit
+more.  I could go on a bit and tell you more secrets of image placement.  Did 
+you know that you can use the `center` environment around the `includeimage` to
+make things look even prettier?  It's true.  The control which \LaTeX provides
+with it is nice.
+Figures are automatically numbered and can be referenced in the text using their label.   
+Example: Figure (\ref{fig:lion}) is TeX's picture.
 
 This is a formatted c++ code block:
 ```cpp
@@ -39,7 +74,7 @@ int main() {
 ```
 
 A lot of other languages are supported, as well as console
-output, and even LaTeX code.
+output, and even \LaTeX code.
 ```console
 $ echo "Hello, world!"
 Hello, world!
@@ -55,10 +90,10 @@ Hello, world!
 1. It numbers itself
 1. automagically
 
-| this | is | a table |
-|------|----|---------|
-| the  | first  | row |
-| the  | second | one |
+| this | is     | a table |
+| ---- | ------ | ------- |
+| the  | first  | row     |
+| the  | second | one     |
 
 - unnumbered 
 - lists
