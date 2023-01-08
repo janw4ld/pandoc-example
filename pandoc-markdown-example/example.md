@@ -39,7 +39,7 @@ And this too,
 but \LaTeX doesn't like headings 5 and 6
 
 ###### heading 6 looks
- like regular text
+like regular text
 
 # The basics
 ## Paragraphs
@@ -65,15 +65,6 @@ before it with two or three spaces.
 - are a thing
 - too
 
-## Tables
-| this | is     | a table |
-| ---- | ------ | ------- |
-| the  | first  | row     |
-| the  | second | one     |
-
-You can float the table to the right or left using \LaTeX's float environment.
-
-
 ## Citations
 BibTex references can be added in pandoc, and Zotero references can be saved as
 BibTex. [@hasselquistQUICThroughputFairness2022]
@@ -90,33 +81,16 @@ as is.
 [^1]: Inserting refs is optional, if you don't insert them in the doc, pandoc adds them to the last page.
 [^2]: This is a footnote, btw.
 
-
-## Links
-Links can be added as follows [this is a link to google](https://google.com), 
-you can also link to other sections in the paper using the heading's id, which
-is usually the heading's text all lowercase with `-` instead of spaces, if you
-have duplicate heading names the IDs will be suffixed with `-1`, `-2`, etc.  
-
-Example:   
-[this is a link to the heading 2](#this-is-a-heading-2).
-
-# This is a heading {.unnumbered .unlisted}
-[This is a link to this heading](#this-is-a-heading-1)   
-Heading links can also be copied from the table of contents, or the markdown
-preview.
-
 ## Images
 Images can be inserted in markdown like this:   
 ![md logo](resources/auto-20230108110032.png)  
 but this feels so out of control, right?   
 
-\newpage
-
 Using \LaTeX, images can be scaled and positioned in the document.
 
 \begin{figure}
    \centering  % centering the image (obviously) optional.
-   \includegraphics[width=0.3\linewidth]{./resources/auto-20230108110032.png}
+   \includegraphics[width=0.2\linewidth]{./resources/auto-20230108110032.png}
 \end{figure}
   
 <!--
@@ -146,6 +120,31 @@ with it is nice.
 Figures are automatically numbered and can be referenced in the text using their
 label. These references are also links to their figures.   
 Example: Figure (\ref{fig:lion}) is TeX's picture.
+
+## Tables
+| this | is     | a table |
+| ---- | ------ | ------- |
+| the  | first  | row     |
+| the  | second | one     |
+: This is a table \label{tab:example}
+
+Tables can be referenced by label just like images.   
+Example: Table (\ref{tab:example}) is a useless table.
+<!-- You can float the table to the right or left using \LaTeX's float environment. -->
+
+## Links
+Links can be added as follows [this is a link to google](https://google.com), 
+you can also link to other sections in the paper using the heading's id, which
+is usually the heading's text all lowercase with `-` instead of spaces, if you
+have duplicate heading names the IDs will be suffixed with `-1`, `-2`, etc.  
+
+Example:   
+[this is a link to the heading 2](#this-is-a-heading-2).
+
+# This is a heading {.unnumbered .unlisted}
+[This is a link to this heading](#this-is-a-heading-1)   
+Heading links can also be copied from the table of contents, or the markdown
+preview.
 
 ## Footnotes
 Footnotes[^4] are a thing.[^3] They are numbered and ordered automatically, but
