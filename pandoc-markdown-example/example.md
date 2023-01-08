@@ -224,9 +224,11 @@ Here's an example:
 
 # Further Reading
 - [Pandoc Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)   
-  [https://pandoc.org/MANUAL.html#pandocs-markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
+  [pandoc.org/MANUAL.html#pandocs-markdown](https://pandoc.org/MANUAL.html#pandocs-markdown)
 - [Overleaf \LaTeX](https://www.overleaf.com/learn)   
-  [https://www.overleaf.com/learn](https://www.overleaf.com/learn)
+  [overleaf.com/learn](https://www.overleaf.com/learn)
+- [\LaTeX-Tutorial.com](https://latex-tutorial.com/tutorials)   
+  [latex-tutorial.com/tutorials](https://latex-tutorial.com/tutorials)
 <!-- 
 # A dirty hack you might need
 If you want a table with a vertical header, you can write it in html, but pandoc
