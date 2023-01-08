@@ -16,8 +16,24 @@ appear there. The table of contents is automatically generated
 from the headings by Pandoc. You can generate it in VSCode or
 write it manually instead if you want to.
 
-
 ## This is a heading 2
+
+## This heading is hidden from the table of contents {.unnumbered .unlisted}
+
+### heading 3
+Headings > 3 are inlined into paragraphs
+
+#### heading 4
+Like this
+
+##### heading 5
+And this too,   
+but LateX doesn't like headings 5 and 6
+
+###### heading 6 looks like regular text
+
+# The basics
+## Paragraphs
 This is a paragraph.   
 
 markdown text can have *italics*, **bold**, `monospace` and 
@@ -29,9 +45,34 @@ This is a new paragraph, separated from the previous by two newlines.
 To have a line break in a paragraph, you need to end the line
 before it with two or three spaces.
 
-BibTex references can be added in pandoc, and zotero references
-can be saved as BibTex. [@hasselquistQUICThroughputFairness2022]
+## Lists
+1. This is a list
+1. It numbers itself
+1. automagically
 
+- unnumbered 
+- lists
+- are a thing
+- too
+
+## Tables
+| this | is     | a table |
+| ---- | ------ | ------- |
+| the  | first  | row     |
+| the  | second | one     |
+
+You can float the table to the right or left using latex's float environment.
+
+
+## Citations
+BibTex references can be added in pandoc, and Zotero references can be saved as
+BibTex. [@hasselquistQUICThroughputFairness2022]
+
+Citation styles are defined in Citation Style Language (CSL) files, this is the
+same format used by Zotero and Mendeley Cite, you can just copy your old style
+as is.
+
+## Images
 Images can be inserted in markdown like this:   
 ![md logo](resources/auto-20230108110032.png)  
 but this feels so out of control, right?   
@@ -40,9 +81,9 @@ Using LateX, images can be scaled and positioned in the document.
    \includegraphics[width=0.5\linewidth]{./resources/auto-20230108110032.png}
 \end{figure}
   
-<!-- ![https://ctan.org/lion/files/ctan_lion_2400.png](https://ctan.org/lion/files/ctan_lion_2400.png) -->
-
-\newpage
+<!--
+![https://ctan.org/lion/files/ctan_lion_2400.png](https://ctan.org/lion/files/ctan_lion_2400.png)
+-->
 
 \begin{wrapfigure}{r}{0.3\textwidth}
    \begin{center}
@@ -63,19 +104,30 @@ you know that you can use the `center` environment around the `includeimage` to
 make things look even prettier?  It's true.  The control which \LaTeX provides
 with it is nice.
 Figures are automatically numbered and can be referenced in the text using their label.   
+
 Example: Figure (\ref{fig:lion}) is TeX's picture.
 
+## Links
 Links can be added as follows [this is a link to google](https://google.com), 
 you can also link to other sections in the paper using the heading's id, which
 is usually the heading's text all lowercase with `-` instead of spaces, if you
 have duplicate heading names the IDs will be suffixed with `-1`, `-2`, etc.  
+
 Example:   
 [this is a link to the heading 2](#this-is-a-heading-2).
-# This is a heading
+
+# This is a heading {.unnumbered .unlisted}
 [This is a link to this heading](#this-is-a-heading-1)   
 Heading links can also be copied from the table of contents, or the markdown
 preview.
 
+## Footnotes
+Footnotes [^2] are a thing too. [^1]
+
+[^1]: This is a footnote.
+[^2]: pandoc & github support footnotes, but not pure markdown.
+
+## Codeblocks
 This is a formatted c++ code block:
 ```cpp
 int main() {
@@ -84,52 +136,25 @@ int main() {
 }
 ```
 
-A lot of other languages are supported, as well as console
-output, and even \LaTeX code.
+A lot of other languages are supported, as well as console output, and even
+\LaTeX code.
 ```console
 $ echo "Hello, world!"
 Hello, world!
 ```
 
+## Blockquotes
 > This is a blockquote.
 > It can span multiple lines,   
 > and has the same rules as a paragraph.
 
-
-## This heading is hidden from the table of contents {.unnumbered .unlisted}
-1. This is a list
-1. It numbers itself
-1. automagically
-
-| this | is     | a table |
-| ---- | ------ | ------- |
-| the  | first  | row     |
-| the  | second | one     |
-
-- unnumbered 
-- lists
-- are a thing
-- too
-
 <!-- 
-tasklists
+## tasklists
 - [ ] are
 - [x] a thing
 - [ ] but only
-- [ ] in github
+- [ ] on github
 -->
-
-### heading 3
-Headings > 3 are inlined into paragraphs
-
-#### heading 4
-Like this
-
-##### heading 5
-And this too,   
-but LateX doesn't like headings 5 and 6
-
-###### heading 6 looks like regular text, btw
 
 # Version Control??
 Yep! You can use git to version control your markdown files, and vscode has a built-in git interface. You can also use github to host your markdown files, kinda as a backup and a way to share them with others. This paragraph is in a new commit from the previous one. Every commit is a point in the project's time that you decided to save and assign a name to. You can always go back to any commit, so you should create a commit for every significant addition or change to your project. Git can be used to collaborate with others, but that's a bit complicated for a text editing workflow.
@@ -145,34 +170,36 @@ Here's an example:
    - a: Elizabeth II
 
 <!-- 
-# Dirty hacks you might need
-<table><tr><th>
+# A dirty hack you might need
+If you want a table with a vertical header, you can write it in html, but pandoc
+will not render it in the pdf.
+<table><tr><th>   
    This is a
-   </th><td>
+   </th><td>   
     It's not a thing
-   </th><td>
+   </th><td>   
    but this is
-</td></tr><tr><th>
+</td></tr><tr><th>   
    vertical headered
-   </th><td>
+   </th><td>   
    you should wanna
-   </th><td>
+   </th><td>   
    how you
-   </td></tr><tr><th>
+   </td></tr><tr><th>   
    HTML table
-   </th><td>
+   </th><td>   
    use in a document
-   </th><td>
+   </th><td>   
    can do it
 </td></tr></table>
 -->
 
 \newpage
 
-# References[^1] [^2]
+# References[^3] [^4]
 
 ::: {#refs}
 :::
 
-[^1]: Inserting refs is optional, if you don't insert them in the doc, pandoc adds them to the last page.
-[^2]: This is a footnote, btw.
+[^3]: Inserting refs is optional, if you don't insert them in the doc, pandoc adds them to the last page.
+[^4]: This is a footnote, btw.
