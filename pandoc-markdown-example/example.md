@@ -9,12 +9,16 @@ header-includes: |
 
 \newpage
 
+# Introduction
+This document is supposed to be read with the source and render side-by-side;
+It demonstrates some of the pandoc markdown+latex syntax, which can be learned
+by observing the code in the md source, and its resulting output in the PDF.
+
 # This is a heading
-The headings appear as sections in the table of content. If 
-your pdf viewer supports document outlines, the headings will also 
-appear there. The table of contents is automatically generated 
-from the headings by Pandoc. You can generate it in VSCode or
-write it manually instead if you want to.
+The headings appear as sections in the table of content. If your pdf viewer
+supports document outlines, the headings will also  appear there. The table of
+contents is automatically generated from the headings by Pandoc. You can
+generate it in VSCode or write it manually instead if you want to.
 
 ## This is a heading 2
 
@@ -30,16 +34,16 @@ Like this
 And this too,   
 but LateX doesn't like headings 5 and 6
 
-###### heading 6 looks like regular text
+###### heading 6 looks
+ like regular text
 
 # The basics
 ## Paragraphs
 This is a paragraph.   
 
-markdown text can have *italics*, **bold**, `monospace` and 
-~~strikethrough~~ in it. \uline{underlined text isn't a thing
-in markdown}, but u can do it in LaTex, and in <u>HTML</u> 
-too, LaTex has \uuline{dunderline text} as well.
+markdown text can have *italics*, **bold**, `monospace` and  ~~strikethrough~~ 
+in it. \uline{underlined text isn't a thing in markdown}, but u can do it in 
+\LaTeX, and in <u>HTML</u> too, LaTex has \uuline{dunderline text} as well.
 
 This is a new paragraph, separated from the previous by two newlines.
 To have a line break in a paragraph, you need to end the line
@@ -72,6 +76,20 @@ Citation styles are defined in Citation Style Language (CSL) files, this is the
 same format used by Zotero and Mendeley Cite, you can just copy your old style
 as is.
 
+## Links
+Links can be added as follows [this is a link to google](https://google.com), 
+you can also link to other sections in the paper using the heading's id, which
+is usually the heading's text all lowercase with `-` instead of spaces, if you
+have duplicate heading names the IDs will be suffixed with `-1`, `-2`, etc.  
+
+Example:   
+[this is a link to the heading 2](#this-is-a-heading-2).
+
+# This is a heading {.unnumbered .unlisted}
+[This is a link to this heading](#this-is-a-heading-1)   
+Heading links can also be copied from the table of contents, or the markdown
+preview.
+
 ## Images
 Images can be inserted in markdown like this:   
 ![md logo](resources/auto-20230108110032.png)  
@@ -81,7 +99,7 @@ Using LateX, images can be scaled and positioned in the document.
 
 \begin{figure}
    \centering % centering the image (obviously) optional.
-   \includegraphics[width=0.5\linewidth]{./resources/auto-20230108110032.png}
+   \includegraphics[width=0.3\linewidth]{./resources/auto-20230108110032.png}
 \end{figure}
   
 <!--
@@ -107,23 +125,10 @@ more.  I could go on a bit and tell you more secrets of image placement.  Did
 you know that you can use the `center` environment around the `includeimage` to
 make things look even prettier?  It's true.  The control which \LaTeX provides
 with it is nice.
-Figures are automatically numbered and can be referenced in the text using their label. These references are also links to their figures.   
+Figures are automatically numbered and can be referenced in the text using their
+label. These references are also links to their figures.   
 
 Example: Figure (\ref{fig:lion}) is TeX's picture.
-
-## Links
-Links can be added as follows [this is a link to google](https://google.com), 
-you can also link to other sections in the paper using the heading's id, which
-is usually the heading's text all lowercase with `-` instead of spaces, if you
-have duplicate heading names the IDs will be suffixed with `-1`, `-2`, etc.  
-
-Example:   
-[this is a link to the heading 2](#this-is-a-heading-2).
-
-# This is a heading {.unnumbered .unlisted}
-[This is a link to this heading](#this-is-a-heading-1)   
-Heading links can also be copied from the table of contents, or the markdown
-preview.
 
 ## Footnotes
 Footnotes [^2] are a thing too. [^1]
@@ -161,17 +166,31 @@ Hello, world!
 -->
 
 # Version Control??
-Yep! You can use git to version control your markdown files, and vscode has a built-in git interface. You can also use github to host your markdown files, kinda as a backup and a way to share them with others. This paragraph is in a new commit from the previous one. Every commit is a point in the project's time that you decided to save and assign a name to. You can always go back to any commit, so you should create a commit for every significant addition or change to your project. Git can be used to collaborate with others, but that's a bit complicated for a text editing workflow.
+Yep! You can use git to version control your markdown files, and vscode has a 
+built-in git interface. You can also use github to host your markdown files, 
+kinda as a backup and a way to share them with others. This paragraph is in a
+new commit from the previous one. Every commit is a point in the project's time 
+that you decided to save and assign a name to. You can always go back to any
+commit, so you should create a commit for every significant addition or change 
+to your project. Git can be used to collaborate with others, but that's a bit 
+complicated for a text editing workflow.
+
+It's not recommended to have your rendered documents in git, because they are 
+binary files that will make your repo grow uncontrollably with every change.
 
 # AI-assisted text editing
-You can use your university email address or your student ID card to get a free github pro subscription that allows u to use GitHub Copilot in VSCode.
-GitHub copilot suggests predictions of what you're going to type, and you can ask it questions in the document or the comments. It can help with git commands, md and latex syntax or even answer general trivia.
+You can use your university email address or your student ID card to get a free
+github pro subscription that allows u to use GitHub Copilot in VSCode. GitHub 
+copilot suggests predictions of what you're going to type, and you can ask it
+questions in the document or the comments. It can help with git commands, md and
+latex syntax or even answer general trivia.
 
-To ask a question you need to precede it with "q:" or copilot might not suggest a response to it.   
+To ask a question you need to precede it with "q:" or copilot might not suggest
+a response to it.   
 Here's an example:
 
-   - q: Who is the queen of England?
-   - a: Elizabeth II
+- q: Who is the queen of England?
+- a: Elizabeth II
 
 <!-- 
 # A dirty hack you might need
@@ -197,8 +216,6 @@ will not render it in the pdf.
    can do it
 </td></tr></table>
 -->
-
-\newpage
 
 # References[^3] [^4]
 
