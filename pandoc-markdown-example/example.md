@@ -188,13 +188,12 @@ Hello, world!
 > It can span multiple lines,   
 > and has the same rules as a paragraph.
 
-<!-- 
-## tasklists
-- [ ] are
-- [x] a thing
-- [ ] but only
-- [ ] on github
--->
+## Tasklists
+   - [ ] are a thing
+   - [ ] but only in
+   - [x] github &
+   - [x] pandoc md
+
 
 # Version Control??
 Yep! You can use git to version control your markdown files, and vscode has a 
