@@ -78,6 +78,7 @@ Images can be inserted in markdown like this:
 but this feels so out of control, right?   
 Using LateX, images can be scaled and positioned in the document.
 \begin{figure}
+   \centering % centering the image (obviously) optional.
    \includegraphics[width=0.5\linewidth]{./resources/auto-20230108110032.png}
 \end{figure}
   
