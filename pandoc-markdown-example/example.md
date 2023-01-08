@@ -1,6 +1,9 @@
 ---
 title: Pandoc Markdown Example
+subtitle: A document to demonstrate pandoc markdown usage
+author: [janw4ld, Jane Doe]
 bibliography: example.bib
+geometry: a4paper,margin=2.5cm
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
 header-includes: |
    \usepackage{graphicx}
@@ -45,7 +48,9 @@ markdown text can have *italics*, **bold**, `monospace` and  ~~strikethrough~~
 in it. \uline{underlined text isn't a thing in markdown}, but u can do it in 
 \LaTeX, and in <u>HTML</u> too, LaTex has \uuline{dunderline text} as well.
 
-This is a new paragraph, separated from the previous by two newlines.
+Pure markdown doesn't support ^superscript^ and ~subscript~, but pandoc does.
+
+This is a new paragraph, separated from the previous by two newlines.  
 To have a line break in a paragraph, you need to end the line
 before it with two or three spaces.
 
@@ -192,6 +197,8 @@ Here's an example:
 - q: Who is the queen of England?
 - a: Elizabeth II
 
+# Further Reading
+- [Markdown Cheatsheet](
 <!-- 
 # A dirty hack you might need
 If you want a table with a vertical header, you can write it in html, but pandoc
