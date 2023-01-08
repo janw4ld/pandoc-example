@@ -1,5 +1,5 @@
 # A Pandoc Markdown Example
-This repo is a suggestion of a pandoc markdown workflow for writing academic papers, as well as a markdown syntax showcase for my sibling :p   
+This repo is a suggestion of a pandoc markdown workflow for writing academic papers, as well as a showcase of markdown+latex syntax for my sibling :p
 
 ### TODO
    - [ ] Add the list of VSCode extensions used.
@@ -9,7 +9,7 @@ This repo is a suggestion of a pandoc markdown workflow for writing academic pap
 ## Powered by
 - [VSCode](https://code.visualstudio.com/), a text editor
 - [Pandoc](https://pandoc.org/), a universal document converter
+- [TeXLive](https://www.tug.org/texlive/), a LaTeX distribution
 - [Zotero](https://www.zotero.org/), a reference manager
 - [Git](https://git-scm.com/), a version control system
-- [Github](https://github.com), a code hosting platform
-- [Github Copilot](https://copilot.github.com/), for automating the boring stuff
+- [GitHub Copilot](https://copilot.github.com/), for automating the boring stuff
