@@ -141,9 +141,9 @@ more.  I could go on a bit and tell you more secrets of image placement.  Did
 you know that you can use the `center` environment around the `includeimage` to
 make things look even prettier?  It's true.  The control which \LaTeX provides
 with it is nice.
+
 Figures are automatically numbered and can be referenced in the text using their
 label. These references are also links to their figures.   
-
 Example: Figure (\ref{fig:lion}) is TeX's picture.
 
 ## Footnotes
