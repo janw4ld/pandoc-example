@@ -2,25 +2,28 @@
 title: Pandoc Markdown Example
 subtitle: A document to demonstrate pandoc markdown usage
 author: [janw4ld, Jane Doe]
-bibliography: example.bib
+bibliography: [example.bib]
+numbersections: true
 geometry: a4paper,margin=2.5cm
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/ieee.csl
 header-includes: |
    \usepackage{graphicx}
    \usepackage{wrapfig}
    \usepackage{multicol}
+   \usepackage{arabtex}
+   \usepackage{utf8}
 ---
+\setcode{utf8}
 
+\tableofcontents
 \newpage
 
 # Introduction
-This document is supposed to be read with the source and render side-by-side;
-It demonstrates some of the pandoc markdown+latex syntax, which can be learned
-by observing the code in the md source, and its resulting output in the PDF.
+
 
 # This is a heading
 The headings appear as sections in the table of content. If your pdf viewer
-supports document outlines, the headings will also  appear there. The table of
+supports document outlines, the headings will also appear there. The table of
 contents is automatically generated from the headings by Pandoc. You can
 generate it in VSCode or write it manually instead if you want to.
 
@@ -78,7 +81,8 @@ as is.
 ::: {#refs}
 :::
 
-[^1]: Inserting refs is optional, if you don't insert them in the doc, pandoc adds them to the last page.
+[^1]: Inserting refs is optional, if you don't insert them in the doc, pandoc
+adds them to the last page.
 [^2]: This is a footnote, btw.
 
 ## Images
@@ -157,13 +161,13 @@ the recommended method of footnote creation.
 
 ## Multicolumns
 \begin{multicols}{2}
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ut 
-doloribus ducimus laudantium odit, nostrum consequuntur fugit cumque 
-vitae officia a possimus corrupti repellendus numquam voluptatibus illo!
-Fuga, explicabo veritatis! Lorem ipsum dolor, sit amet consectetur
-adipisicing elit. Soluta cumque facilis consequuntur tenetur veniam 
-eveniet distinctio neque maxime fugiat assumenda. Odio placeat quod 
-iusto illum. Odit, tenetur voluptate. Sapiente, soluta?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ut doloribus
+ducimus laudantium odit, nostrum consequuntur fugit cumque vitae officia a
+possimus corrupti repellendus numquam voluptatibus illo!Fuga, explicabo 
+veritatis! Lorem ipsum dolor, sit amet consecteturadipisicing elit. Soluta
+cumque facilis consequuntur tenetur veniam eveniet distinctio neque maxime
+fugiat assumenda. Odio placeat quod iusto illum. Odit, tenetur voluptate.
+Sapiente, soluta?
 \end{multicols}
 
 ## Codeblocks
@@ -193,6 +197,10 @@ Hello, world!
    - [x] github &
    - [x] pandoc md
 
+## ArabTeX?
+\begin{RLtext}
+ممكن نكتب عربي في \LR{\LaTeX} عادي، في الواقع \LR{VSCode} هو اللي بيعاني مع الكتابة الـ\LR{R-T-L}
+\end{RLtext}
 
 # Version Control??
 Yep! You can use git to version control your markdown files, and vscode has a 
