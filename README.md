@@ -3,8 +3,8 @@ This repo is a suggestion of a pandoc markdown workflow for writing academic pap
 
 ### TODO
    - [ ] Add the list of VSCode extensions used.
-   - [x] Add examples of link and image insertions
-   - [ ] Add a mermaid diagram example.
+   - [x] Add examples of link and image insertions.
+   - [ ] ~~Add a [mermaid](https://mermaid.js.org/) diagram example.~~
 
 ## Powered by
 - [VSCode](https://code.visualstudio.com/), a text editor
