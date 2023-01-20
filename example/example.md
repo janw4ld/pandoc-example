@@ -199,7 +199,12 @@ Hello, world!
 
 ## ArabTeX?
 \begin{RLtext}
-ممكن نكتب عربي في \LR{\LaTeX} عادي، في الواقع \LR{VSCode} هو اللي بيعاني مع الكتابة الـ\LR{R-T-L}
+ممكن نكتب عربي في
+\LR{\LaTeX}
+عادي، في الواقع
+\LR{VSCode} 
+هو اللي بيعاني مع الكتابة الـ
+\LR{RTL}
 \end{RLtext}
 
 # Version Control??
